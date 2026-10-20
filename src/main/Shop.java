@@ -227,7 +227,7 @@ public class Shop {
 			BufferedReader bf = new BufferedReader(new FileReader(f));
 			String Linea = "";
 			while(Linea = bf.readLine() != null)
-			{
+			{	
 				
 			}
 		} catch (FileNotFoundException e) {
