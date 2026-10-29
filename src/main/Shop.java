@@ -215,13 +215,31 @@ public class Shop {
 		// now read from file
 		this.readInventory();
 	}
+	
+	/**
+	 * Valida si el fitxer es valid o no.
+	 */
+	private void validator(File f) {
+		if (!f.exists()) {
+		    System.out.println("No s'ha pogut trobar el fitxer.");
+		}
+		
+		if (!f.isFile()) {
+		    System.out.println("El arxiu items no es un fitxer.");
+		}
 
+		if (!f.canRead()) {
+		    System.out.println("El fitxer items no es pot llegir");
+		}
+	}
+	
 	/**
 	 * read inventory from file
 	 */
 	private void readInventory() {
 		File f = new File(System.getProperty("user.dir") + File.separator + "files" + File.separator + ITEMS_FILE);
-
+		
+		this.validator(f);
 		// TODO RA1-ISSUE-03: obrir el fitxer, llegir-lo linia a linia i afegir cada producte a inventory.
 		/*try {
 			BufferedReader bf = new BufferedReader(new FileReader(f));
