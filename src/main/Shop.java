@@ -223,17 +223,17 @@ public class Shop {
 		File f = new File(System.getProperty("user.dir") + File.separator + "files" + File.separator + ITEMS_FILE);
 
 		// TODO RA1-ISSUE-03: obrir el fitxer, llegir-lo linia a linia i afegir cada producte a inventory.
-		try {
+		/*try {
 			BufferedReader bf = new BufferedReader(new FileReader(f));
 			String Linea = "";
 			while(Linea = bf.readLine() != null)
-			{	
+			{
 				
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		
 		// TODO RA1-ISSUE-04: delegar la conversio de cada linia a parseProductLine.
