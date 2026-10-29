@@ -1,6 +1,7 @@
 package main;
 
 import model.Product;
+
 import model.Sale;
 import model.Amount;
 import model.Client;
@@ -241,17 +242,18 @@ public class Shop {
 		
 		this.validator(f);
 		// TODO RA1-ISSUE-03: obrir el fitxer, llegir-lo linia a linia i afegir cada producte a inventory.
-		/*try {
+		try {
 			BufferedReader bf = new BufferedReader(new FileReader(f));
 			String Linea = "";
-			while(Linea = bf.readLine() != null)
+			ArrayList<String> content = new ArrayList<String>();
+			while((Linea = bf.readLine()) != null)
 			{
-				
+				content.add(Linea);
 			}
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}*/
+			System.err.println("No s'ha pogut trobar el fitxer.");
+		}
 		
 		
 		// TODO RA1-ISSUE-04: delegar la conversio de cada linia a parseProductLine.
