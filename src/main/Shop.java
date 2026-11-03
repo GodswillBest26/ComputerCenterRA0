@@ -244,15 +244,19 @@ public class Shop {
 		// TODO RA1-ISSUE-03: obrir el fitxer, llegir-lo linia a linia i afegir cada producte a inventory.
 		try {
 			BufferedReader bf = new BufferedReader(new FileReader(f));
-			String Linea = "";
-			ArrayList<String> content = new ArrayList<String>();
+			String Linea;
 			while((Linea = bf.readLine()) != null)
 			{
-				content.add(Linea);
+				inventory.add(parseProductLine(Linea));
 			}
+			
+			bf.close();
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			System.err.println("No s'ha pogut trobar el fitxer.");
+		} catch (IOException e2) {
+			// TODO Auto-generated catch block
+			System.err.println("No s'ha pogut tancar correctament el flux.");
 		}
 		
 		
