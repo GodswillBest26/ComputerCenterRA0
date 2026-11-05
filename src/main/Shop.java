@@ -223,13 +223,11 @@ public class Shop {
 	private void validator(File f) {
 		if (!f.exists()) {
 		    System.out.println("No s'ha pogut trobar el fitxer.");
-		}
-		
-		if (!f.isFile()) {
+		    
+		} else if (!f.isFile()) {
 		    System.out.println("El arxiu items no es un fitxer.");
-		}
-
-		if (!f.canRead()) {
+		    
+		} else if (!f.canRead()) {
 		    System.out.println("El fitxer items no es pot llegir");
 		}
 	}
