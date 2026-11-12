@@ -245,7 +245,7 @@ public class Shop {
 			String line;
 			while((line = bf.readLine()) != null)
 			{
-				System.out.println(line);
+				inventory.add(parseProductLine(line));
 			}
 			
 			bf.close();
@@ -267,6 +267,12 @@ public class Shop {
 	 * Convert a valid line from items.txt into a Product.
 	 */
 	private Product parseProductLine(String line) {
+		String[] producteSegmentat = line.split(";");
+		String name = producteSegmentat[0];
+		Amount wholesalerPrice = Double.parseDouble(producteSegmentat[1]);
+		boolean available;
+		int stock;
+		Product product = new Product();
 		// TODO RA1-ISSUE-04: validar camps, convertir preu i estoc, i retornar un Product.
 		// TODO RA1-ISSUE-05: decidir com es tracten les linies mal formades.
 		return null;
