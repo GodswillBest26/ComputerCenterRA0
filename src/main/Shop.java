@@ -245,7 +245,7 @@ public class Shop {
 			String line;
 			while((line = bf.readLine()) != null)
 			{
-				inventory.add(parseProductLine(line));
+				System.out.println(line);
 			}
 			
 			bf.close();
